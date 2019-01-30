@@ -196,9 +196,12 @@ public class BankAccountTests {
 		long ID = person.getAccounts().get(0).getID();
 		Double balanceBefore = person.getAccountByID(ID).checkBalance();
 
-		person.getAccountByID(ID).deposit(amount);
+		try {
+			person.getAccountByID(ID).withdraw(amount);
+		} catch (NotEnoughFundsException e) {
+			System.out.println(e.getMessage());
+		}
 
-		assertEquals(balanceBefore + amount, person.getAccountByID(ID).checkBalance(), 0.01);
+		assertEquals(balanceBefore - amount, person.getAccountByID(ID).checkBalance(), 0.01);
 	}
-
 }
