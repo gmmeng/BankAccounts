@@ -17,8 +17,8 @@ import java.sql.Statement;
 public class MainApp {
 	private static final String USERNAME = "trainee1";
 	private static final String PASSWORD = "!QAZSE4";
-//	private static final String URL = "jdbc:oracle:thin:@devopsdb.c7iesyjfe3ry.us-east-1.rds.amazonaws.com:1521:ISSUEDB";
-	private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
+	private static final String URL = "jdbc:oracle:thin:@devopsdb.c7iesyjfe3ry.us-east-1.rds.amazonaws.com:1521:ISSUEDB";
+//	private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 	
 	public static void main(String[] args) {
 		
