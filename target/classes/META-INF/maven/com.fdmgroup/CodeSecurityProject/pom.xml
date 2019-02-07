@@ -23,7 +23,7 @@
 		<repository>
 			<id>repo1</id>
 			<name>OJDBC</name>
-			<url>https://mvnrepository.com/artifact/oracle/ojdbc6</url>
+			<url>http://www.datanucleus.org/downloads/maven2/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar</url>
 		</repository>
 	</repositories>
 
