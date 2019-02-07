@@ -17,7 +17,8 @@ import java.sql.Statement;
 public class MainApp {
 	private static final String USERNAME = "trainee1";
 	private static final String PASSWORD = "!QAZSE4";
-	private static final String URL = "jdbc:oracle:thin:@devopsdb.c7iesyjfe3ry.us-east-1.rds.amazonaws.com:1521:ISSUEDB";
+//	private static final String URL = "jdbc:oracle:thin:@devopsdb.c7iesyjfe3ry.us-east-1.rds.amazonaws.com:1521:ISSUEDB";
+	private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 	
 	public static void main(String[] args) {
 		
@@ -73,7 +74,7 @@ public class MainApp {
 	private static void createStatement() {
 		try(	Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 				Statement st = conn.createStatement()){
-			String query = "CREATE TABLE TBL_USER(user_id NUMBER(6) PRIMARY KEY, username VARCHAR2(50), pw VARCHAR2(30), "
+			String query = "CREATE TABLE TBL_TEST(user_id NUMBER(6) PRIMARY KEY, username VARCHAR2(50), pw VARCHAR2(30), "
 					+ "firstname VARCHAR2(30), lastname VARCHAR2(30))";
 			st.execute(query);
 			System.out.println("TBL_USER created successfully..");
